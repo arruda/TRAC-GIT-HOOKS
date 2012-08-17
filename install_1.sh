@@ -67,7 +67,7 @@ chown www-data:www-data /var/lib/cgi-bin
 
 echo "Configuring Apache" ###
 
-cat <<EOF > /etc/apache2/sites-available/repos.{DOMAIN_NAME}
+cat <<EOF > /etc/apache2/sites-available/repos.${DOMAIN_NAME}
 <virtualhost *:80>
 
 ServerAdmin root@${DOMAIN_NAME}

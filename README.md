@@ -19,7 +19,11 @@ Where my myNewUser must be the name of the user name you want to create.
 
 USAGE
 =============
-You can just download this scripts into anywhere, like /tmp/ in the server, and then run the first one::
+You can just download this scripts into anywhere, like /tmp/ in the server::
+    wget https://github.com/arruda/TRAC-GIT-HOOKS/tarball/master
+    tar -zxvf master
+
+ and then run the first script::
 
     ./install_1.sh PROJECT_NAME REPO_NAME DOMAIN_NAME USER_NAME USER_PSSWD RSA_FOLDER_PATH
 

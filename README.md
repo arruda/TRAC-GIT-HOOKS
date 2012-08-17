@@ -6,8 +6,11 @@ A script that I've made that install apache2, trac 0.12(with i18n), git, gitolit
 REQUIREMENTS
 =============
 This was tested in a Ubuntu 12.04 Server 64bits in 08/2012.
+
 Root access to the server or similar.
+
 You'll also need to have a working station(another computer besides the server)
+
 You'll have to copy this working station pub rsa key to somewhere in the server, ex::
 
     scp ~/.ssh/id_rsa.pub root@192.168.0.108:/tmp/myNewUser.pub

@@ -43,12 +43,16 @@ Afther this is done, you'll need to go to your workstation and do the following:
 
 Back in the workstation(the one that you copied the id_rsa.pub)::
 
-    git clone git@${DOMAIN_NAME}:gitolite-admin
+    git clone git@DOMAIN_NAME:gitolite-admin
+
+replacing DOMAIN_NAME with your server domain.
 
 Open the conf/gitolite.conf file, and add this lines to the end of it::
 
-    repo ${REPO_NAME}
-        RW+    =    ${USER_NAME}
+    repo REPO_NAME
+        RW+    =    USER_NAME
+
+replacing REPO_NAME and USER_NAME with the ones used in the execution of the script.
     
 save, commit and push it::
 
@@ -59,3 +63,9 @@ save, commit and push it::
 After this execute install_2.sh, using the same parameters as before! Ex::
 
     ./install_2.sh MyTrac mynewrepo mysite.com myNewUser mystrongpass /tmp
+
+
+
+LICENSE
+=============
+This software is distributed using MIT license, see LICENSE file for more details.

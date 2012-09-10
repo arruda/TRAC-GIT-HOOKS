@@ -42,12 +42,12 @@ RSA_FOLDER_PATH=$6
 
 
 echo "Installing apache and dependencies"
-apt-get install -y apache2 libapache2-mod-python python-setuptools libapache2-mod-wsgi
+apt-get install --force-yes -y apache2 libapache2-mod-python python-setuptools libapache2-mod-wsgi
 
 
 echo "installing git" ###
 
-apt-get install -y git-core
+apt-get install --force-yes -y git-core
 cd /tmp/
 git clone -b 0.12-stable git://github.com/edgewall/trac.git
 easy_install Genshi==0.6

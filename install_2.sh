@@ -52,9 +52,8 @@ ${PROJECT_NAME}
 
 EOF
 
-
+#Add to the end of it:
 cat <<EOF >> /var/lib/trac/${PROJECT_NAME}/conf/trac.ini
-Add to the end of it:
 
 [git]
 cached_repository = false

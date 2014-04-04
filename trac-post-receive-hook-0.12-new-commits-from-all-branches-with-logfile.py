@@ -4,7 +4,7 @@
 # Copyright (c) 2011 Grzegorz Sobański
 #               2012 Juan Fernando Jaramillo
 #
-# Version: 2.1
+# Version: 2.2
 #
 # - adds the commits to trac
 # based on post-receive-email from git-contrib
@@ -21,6 +21,7 @@ GIT_PATH = '/usr/bin/git'
 TRAC_ADMIN = '/usr/local/bin/trac-admin'    # I have other that doesn't work in  /usr/bin/trac-admin
 REPO_NAME = '"(default)"'   # The original one have no "", I change it and work
 LOG_FILE = ""     #"/tmp/traggitplugin.log"
+LOG_ECHO = False # True / False whether you want to echo log messages
 
 # if you are using gitolite or sth similar, you can get the repo name from environemt
 # REPO_NAME = os.getenv('GL_REPO')
@@ -28,8 +29,10 @@ LOG_FILE = ""     #"/tmp/traggitplugin.log"
 def log(v):
     if LOG_FILE != "":
         f = open(LOG_FILE, "a+")
-        print(v)
+        print >> f, v
         f.close()
+    if LOG_ECHO:
+        print(v)
 
 # communication with git
 
